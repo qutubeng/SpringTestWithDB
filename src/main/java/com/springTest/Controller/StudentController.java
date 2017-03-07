@@ -50,6 +50,9 @@ public class StudentController {
 		return studentRepo.count();
 	}
 	
+	/*
+	 *Get student by course  
+	 */
 	@RequestMapping(value = "/getByCourse/{course}", method = RequestMethod.GET)
 	public Collection<Student> getStudentByCourse(@PathVariable("course") String course) {
 		return studentRepo.findByCourse(course);
