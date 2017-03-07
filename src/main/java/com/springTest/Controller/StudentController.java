@@ -45,13 +45,16 @@ public class StudentController {
 		studentRepo.delete(id);
 	}
 	
+	/*
+	 * count total students
+	 */
 	@RequestMapping(value = "/count", method = RequestMethod.GET)
 	public int countStudent() {
 		return studentRepo.count();
 	}
 	
 	/*
-	 *Get student by course  
+	 *Get student by course 
 	 */
 	@RequestMapping(value = "/getByCourse/{course}", method = RequestMethod.GET)
 	public Collection<Student> getStudentByCourse(@PathVariable("course") String course) {
