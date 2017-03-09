@@ -25,6 +25,9 @@ public class StudentController {
 		return studentRepo.findAll();
 	}
 	
+	/*
+	 * get student by Id
+	 */
 	@RequestMapping(value = "/getById/{id}", method = RequestMethod.GET)
 	public Student getStudentById(@PathVariable("id") int id) {
 		return studentRepo.findById(id);
